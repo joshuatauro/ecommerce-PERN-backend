@@ -22,6 +22,8 @@ router.get("/login", async(req, res) => {
 router.post("/signup", async(req,res) => {
   const username = req.body.username
   const password = req.body.password
+
+  
   try{
     if(!password || !username) return res.status(400).json({message: "Please be sure to fill in all the required details."})
 
